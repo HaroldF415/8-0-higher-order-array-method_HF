@@ -45,7 +45,7 @@ const getTitleTracks = ( songs ) => {
   return songs.filter( song => {
 
     if(song.title === song.album )
-      return song;
+      return song
       
   });
 
