@@ -32,7 +32,7 @@ const sortByArtistNameDescending = ( songs ) => {
   return songs.sort( ( songA, songB ) => {
 
     // ! THIS REQUIRES EXTRA ATTENTION
-    if(songA.artist.toLowerCase() > songB.artist.toLowerCase() )
+    if( songA.artist.toLowerCase() > songB.artist.toLowerCase() )
       return -1;
     else if( songB.artist.toLowerCase() > songA.artist.toLowerCase() )
       return 1;
@@ -56,7 +56,7 @@ const sortBySongTitleAscending = ( songs ) => {
   return songs.sort( ( songA, songB ) => {
 
     // ! THIS REQUIRES EXTRA ATTENTION
-    if(songA.title.toLowerCase() < songB.title.toLowerCase() )
+    if( songA.title.toLowerCase() < songB.title.toLowerCase() )
       return -1;
     else if( songB.title.toLowerCase() < songA.title.toLowerCase() )
       return 1;
