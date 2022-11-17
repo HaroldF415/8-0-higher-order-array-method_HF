@@ -13,7 +13,7 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
- function getSongsBySaib( songs ) {
+const getSongsBySaib = ( songs ) => {
 
   return songs.filter( song => song.artist === 'Saib' );
 
@@ -24,7 +24,7 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
- function getSongsOverThreeMinutes( songs ) {
+const getSongsOverThreeMinutes = ( songs ) => {
 
   return songs.filter( song => {
 
@@ -40,7 +40,7 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
- function getTitleTracks( songs ) {
+const getTitleTracks = ( songs ) => {
 
   return songs.filter( song => {
 
