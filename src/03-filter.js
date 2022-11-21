@@ -37,12 +37,7 @@ const getSongsOverThreeMinutes = ( songs ) => {
  */
 const getTitleTracks = ( songs ) => {
 
-  return songs.filter( song => {
-
-    if(song.title === song.album )
-      return song
-      
-  });
+  return songs.filter( song => song.title === song.album );
 
 }; // ends getTitleTracks()
 

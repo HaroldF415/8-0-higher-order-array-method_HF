@@ -17,7 +17,7 @@ const getSongTitles = ( songs ) => {
 
   return songs.map( song => song.title );
 
-} // ends getSongTitles()
+};
 
 /**
  * Returns an array of all of the song titles with the artist.
@@ -30,9 +30,9 @@ const getSongTitles = ( songs ) => {
  */
 const getSongDetails = ( songs ) => {
 
-  return songs.map( song => { return `${song.title} by ${song.artist}` } ) 
+  return songs.map( song => { return `${song.title} by ${song.artist}` } );
  
-} // ends getSongDetails()
+};
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
@@ -45,19 +45,9 @@ const getSongDetails = ( songs ) => {
  */
 const getTitleAndArtist = ( songs ) => {
   
-  return songs.map( song => { return { [ song.title ] : `${ song.artist }` } })
+  return songs.map( song => { return { [ song.title ] : `${ song.artist }` } } );
 
-  // return songs.map( song => {
-    
-  //   let newObj = {};
-
-  //   newObj[song.title] = song.artist;
-
-  //   return newObj;
-
-  // });
-
-} // ends getTitleAndArtist()
+};
 
 
 module.exports = {
