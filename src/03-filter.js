@@ -26,12 +26,7 @@ const getSongsBySaib = ( songs ) => {
  */
 const getSongsOverThreeMinutes = ( songs ) => {
 
-  return songs.filter( song => {
-
-    if( song.runtimeInSeconds > 180 )
-      return song.title;
-
-  });
+  return songs.filter( song => song.runtimeInSeconds > 180 );
 
 }; // ends getSongsOverThreeMinutes()
 

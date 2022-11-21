@@ -29,21 +29,7 @@ const sortByRuntimeAscending = ( songs ) => {
  */
 const sortByArtistNameDescending = ( songs ) => {
 
-  return songs.sort( ( songA, songB ) => {
-
-    // ! THIS REQUIRES EXTRA ATTENTION
-    // * CONVERT TO VARIABLES NEXT - REFACTOR
-    // if( songA.artist.toLowerCase() > songB.artist.toLowerCase() )
-    //   return -1;
-    // else if( songB.artist.toLowerCase() > songA.artist.toLowerCase() )
-    //   return 1;
-    // else
-    //  return 0
-    
-    // ! Z to A
-    return songB.artist.localeCompare( songA.artist );
-
-  } );
+  return songs.sort( ( songA, songB ) => songB.artist.localeCompare( songA.artist ) );
 
 };
 
@@ -57,20 +43,7 @@ const sortByArtistNameDescending = ( songs ) => {
  */
 const sortBySongTitleAscending = ( songs ) => {
 
-  return songs.sort( ( songA, songB ) => {
-
-    // ! THIS REQUIRES EXTRA ATTENTION
-    // if( songA.title.toLowerCase() < songB.title.toLowerCase() )
-    //   return -1;
-    // else if( songB.title.toLowerCase() < songA.title.toLowerCase() )
-    //   return 1;
-    // else
-    //  return 0
-
-    // ! A to Z
-    return songA.title.localeCompare(songB.title); 
-
-  });
+  return songs.sort( ( songA, songB ) => songA.title.localeCompare( songB.title ) );
 
 };
 
