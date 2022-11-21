@@ -47,7 +47,18 @@ const getTitleAndArtist = ( songs ) => {
   
   return songs.map( song => { return { [ song.title ] : `${ song.artist }` } })
 
+  // return songs.map( song => {
+    
+  //   let newObj = {};
+
+  //   newObj[song.title] = song.artist;
+
+  //   return newObj;
+
+  // });
+
 } // ends getTitleAndArtist()
+
 
 module.exports = {
   getSongTitles,

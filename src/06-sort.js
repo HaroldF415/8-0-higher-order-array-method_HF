@@ -17,7 +17,7 @@ const sortByRuntimeAscending = ( songs ) => {
 
   return songs.sort( ( songA, songB ) => songA.runtimeInSeconds - songB.runtimeInSeconds );
 
-} // ends sortByRuntimeAscending()
+};
 
 /**
  * Reorders the array so that the song objects are organized by their artist name. The artist that comes last in the alphabet should come first.
@@ -32,16 +32,20 @@ const sortByArtistNameDescending = ( songs ) => {
   return songs.sort( ( songA, songB ) => {
 
     // ! THIS REQUIRES EXTRA ATTENTION
-    if( songA.artist.toLowerCase() > songB.artist.toLowerCase() )
-      return -1;
-    else if( songB.artist.toLowerCase() > songA.artist.toLowerCase() )
-      return 1;
-    else
-     return 0
+    // * CONVERT TO VARIABLES NEXT - REFACTOR
+    // if( songA.artist.toLowerCase() > songB.artist.toLowerCase() )
+    //   return -1;
+    // else if( songB.artist.toLowerCase() > songA.artist.toLowerCase() )
+    //   return 1;
+    // else
+    //  return 0
+    
+    // ! Z to A
+    return songB.artist.localeCompare( songA.artist );
 
   } );
 
-} // ends sortByArtistNameDescending()
+};
 
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
@@ -56,16 +60,19 @@ const sortBySongTitleAscending = ( songs ) => {
   return songs.sort( ( songA, songB ) => {
 
     // ! THIS REQUIRES EXTRA ATTENTION
-    if( songA.title.toLowerCase() < songB.title.toLowerCase() )
-      return -1;
-    else if( songB.title.toLowerCase() < songA.title.toLowerCase() )
-      return 1;
-    else
-     return 0
+    // if( songA.title.toLowerCase() < songB.title.toLowerCase() )
+    //   return -1;
+    // else if( songB.title.toLowerCase() < songA.title.toLowerCase() )
+    //   return 1;
+    // else
+    //  return 0
+
+    // ! A to Z
+    return songA.title.localeCompare(songB.title); 
 
   });
 
-} // ends sortBySongTItleAscending()
+};
 
 module.exports = {
   sortByRuntimeAscending,
